@@ -1,0 +1,46 @@
+# Gitpod 配置文件
+# 访问方式：在 GitHub 仓库 URL 前添加 gitpod.io/#
+
+image: gitpod/workspace-python-3.11
+
+# 预装工具
+tasks:
+  - name: Setup Environment
+    init: |
+      echo "🚀 Setting up AI Cloud IDE..."
+      pip install --upgrade pip
+      pip install requests httpx fastapi uvicorn jupyter
+      npm install -g pnpm bun
+    command: |
+      echo "✅ Environment ready!"
+      echo "🌐 This is your AI-accessible Cloud IDE"
+      echo "📝 You can code, run commands, and use the terminal"
+
+# 端口配置
+ports:
+  - port: 8080
+    visibility: public
+    name: Web Server
+  - port: 3000
+    visibility: public
+    name: App Server
+  - port: 8888
+    visibility: public
+    name: Jupyter
+
+# VS Code 扩展
+vscode:
+  extensions:
+    - ms-python.python
+    - ms-toolsai.jupyter
+    - dbaeumer.vscode-eslint
+    - esbenp.prettier-vscode
+    - eamodio.gitlens
+    - github.copilot
+    - ms-azuretools.vscode-docker
+
+# 工作区配置
+workspaceLocation: "."
+
+# 启动配置
+checkoutLocation: "."

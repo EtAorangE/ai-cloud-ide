@@ -1,0 +1,19 @@
+{
+  "name": "ai-cloud-ide",
+  "version": "1.0.0",
+  "description": "AI-accessible Cloud IDE workspace",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node index.js"
+  },
+  "keywords": [
+    "ai",
+    "cloud-ide",
+    "gitpod",
+    "vscode"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {}
+}
